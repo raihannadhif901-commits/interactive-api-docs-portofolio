@@ -42,7 +42,7 @@ Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) installed.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/interactive-api-docs.git
+   git clone https://github.com/raihannadhif901-commits/interactive-api-docs.git
    cd interactive-api-docs
    ```
 
