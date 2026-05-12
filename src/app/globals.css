@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-fg);
+  
+  --color-code-bg: var(--code-bg);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+  
+  --border-subtle: #eaeaea;
+  --border-strong: #cccccc;
+  
+  --accent: #000000;
+  --accent-hover: #333333;
+  
+  --muted: #f8f9fa;
+  --muted-fg: #666666;
+  
+  --code-bg: #f6f8fa; /* GitHub Light code background */
+}
+
+.dark {
+  --bg: #000000;
+  --fg: #ffffff;
+  
+  --border-subtle: #222222;
+  --border-strong: #333333;
+  
+  --accent: #ffffff;
+  --accent-hover: #dddddd;
+  
+  --muted: #111111;
+  --muted-fg: #888888;
+  
+  --code-bg: #09090b;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  border-color: var(--color-border-subtle);
 }
